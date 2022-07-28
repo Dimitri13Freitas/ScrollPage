@@ -16,8 +16,15 @@ logoAdd();
 
 // Active
 const nav = document.querySelectorAll('#nav li a');
-nav.forEach((e) => {
+const tabSlide = document.querySelector('.tabSlide')
+
+
+nav.forEach((e, index) => {
   e.addEventListener('click', () => {
-    // console.log(nav);
+    nav.forEach((event) => {
+      event.classList.remove('active');
+    });
+    e.classList.add('active');
+    console.log(index);
   });
 });

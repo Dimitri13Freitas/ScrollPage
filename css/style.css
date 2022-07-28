@@ -12,7 +12,6 @@
   --font-1:#f1f1f1;
   --font-2:#B2B2B2;
   --cor-primaria:#BDFF02;
-  --cor-gradient:linear-gradient(270deg, var(--cor-primaria) 0%, #D1FF4E 46.41%, var(--font-1) 100%);
   --cor-sombra:#90b822;
   --hoverNav:#2d3341;
 }
@@ -47,6 +46,7 @@ body {
 .navegacao ul li a.active {
   background-color: var(--cor-primaria);
   color:var(--bg);
+  transition: .2s;
 }
 .navegacao ul{
   display: flex;
@@ -75,7 +75,7 @@ body {
   opacity: 1; 
   width:85px;
 }
-.navegacao ul li:nth-child(2):hover ~ .tabSlide {
+.navegacao ul li:nth-child(2):hover ~ .tabSlide{
   opacity: 1;
   width:105px;
   left:85px;
