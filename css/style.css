@@ -44,9 +44,8 @@ body {
   padding:10px 0 0 0;
 }
 .navegacao ul li a.active {
-  background-color: var(--cor-primaria);
   color:var(--bg);
-  transition: .2s;
+  transition: 0.3s;
 }
 .navegacao ul{
   display: flex;
@@ -60,35 +59,33 @@ body {
   border-radius:5px;
 }
 .tabSlide {
-  opacity: 0;
   width:85px;
   height: 36px;
   position:absolute;
-  background-color: var(--hoverNav);
   border-radius:5px;
   top:0;
   left:0;
   z-index:-1;
   transition: 0.3s;
 }
-.navegacao ul li:nth-child(1):hover ~ .tabSlide {
-  opacity: 1; 
+.navegacao ul li:nth-child(1) ~ .tabSlide.home {
   width:85px;
+  background-color: var(--cor-primaria);
 }
-.navegacao ul li:nth-child(2):hover ~ .tabSlide{
-  opacity: 1;
+.navegacao ul li:nth-child(2) ~ .tabSlide.servicos{
   width:105px;
   left:85px;
+  background-color: var(--cor-primaria);
 }
-.navegacao ul li:nth-child(3):hover ~ .tabSlide {
-  opacity: 1;
+.navegacao ul li:nth-child(3) ~ .tabSlide.comunidade {
   width:136px;
   left:190px;
+  background-color: var(--cor-primaria);
 }
-.navegacao ul li:nth-child(4):hover ~ .tabSlide {
-  opacity: 1;
+.navegacao ul li:nth-child(4) ~ .tabSlide.dev {
   width:69px;
   left:327px;
+  background-color: var(--cor-primaria);
 }
 
 /* Container */
@@ -112,25 +109,25 @@ body {
 }
 
 /* Home */
-.home div {
+.homePage div {
   margin-top:100px;
   color:var(--font-1);
   align-self: flex-start;
 }
-.home div h1 {
+.homePage div h1 {
   max-width:550px;
   margin-bottom:15px;
   font-size: 2.3rem;
 }
-.home div h1 span{
+.homePage div h1 span{
   color:var(--cor-primaria);
 }
-.home div p {
+.homePage div p {
   max-width: 470px;
   color:var(--font-2);
   margin-bottom:25px;
 }
-.home div a {
+.homePage div a {
   color:var(--bg);
   display: inline-block;
   padding:10px 25px;
@@ -138,10 +135,10 @@ body {
   border-radius: 5px;
   transition: 0.3s;
 }
-.home div a:hover {
+.homePage div a:hover {
   box-shadow: 0 0 15px var(--cor-sombra);
 }
-.home img{
+.homePage img{
   width:450px;
 }
 
