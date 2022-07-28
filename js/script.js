@@ -14,5 +14,10 @@ window.onload = () => {
 };
 logoAdd();
 
-
-
+// Active
+const nav = document.querySelectorAll('#nav li a');
+nav.forEach((e) => {
+  e.addEventListener('click', () => {
+    // console.log(nav);
+  });
+});

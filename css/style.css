@@ -14,6 +14,7 @@
   --cor-primaria:#BDFF02;
   --cor-gradient:linear-gradient(270deg, var(--cor-primaria) 0%, #D1FF4E 46.41%, var(--font-1) 100%);
   --cor-sombra:#90b822;
+  --hoverNav:#2d3341;
 }
 
 /* Geral */
@@ -34,7 +35,6 @@ body {
   animation: logoWriting 6s ease-in-out forwards;
   transition:.3s;
 }
-
 .logo.sombra {
   filter: drop-shadow(0 0 50px var(--cor-sombra));
 }
@@ -44,30 +44,64 @@ body {
   justify-content: space-around;
   padding:10px 0 0 0;
 }
+.navegacao ul li a.active {
+  background-color: var(--cor-primaria);
+  color:var(--bg);
+}
 .navegacao ul{
   display: flex;
   font-size: 1rem;
-}
-.navegacao ul li {
-  color:var(--font-1);
+  position:relative;
 }
 .navegacao ul li a {
+  display: inline-block;
   color:var(--font-1);
-  padding:10px 20px;
-
+  padding:8px 20px;
+  border-radius:5px;
+}
+.tabSlide {
+  opacity: 0;
+  width:85px;
+  height: 36px;
+  position:absolute;
+  background-color: var(--hoverNav);
+  border-radius:5px;
+  top:0;
+  left:0;
+  z-index:-1;
+  transition: 0.3s;
+}
+.navegacao ul li:nth-child(1):hover ~ .tabSlide {
+  opacity: 1; 
+  width:85px;
+}
+.navegacao ul li:nth-child(2):hover ~ .tabSlide {
+  opacity: 1;
+  width:105px;
+  left:85px;
+}
+.navegacao ul li:nth-child(3):hover ~ .tabSlide {
+  opacity: 1;
+  width:136px;
+  left:190px;
+}
+.navegacao ul li:nth-child(4):hover ~ .tabSlide {
+  opacity: 1;
+  width:69px;
+  left:327px;
 }
 
 /* Container */
 .container {
   display: flex;
-  scroll-snap-type: x mandatory;
-  overflow-x: scroll;
+  scroll-snap-type: inline mandatory;
+  overflow-y: scroll;
   scroll-behavior: smooth;
 }
 .container::-webkit-scrollbar {
   display: none;
 }
-.container section{
+.container section {
   display: flex;
   flex: none;
   align-items: center;
@@ -79,7 +113,7 @@ body {
 
 /* Home */
 .home div {
-  margin-top:130px;
+  margin-top:100px;
   color:var(--font-1);
   align-self: flex-start;
 }
