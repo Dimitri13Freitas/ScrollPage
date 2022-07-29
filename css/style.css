@@ -25,6 +25,15 @@ body {
   margin:0;
 }
 
+/* Utilitário */
+.titulo {
+  font-size: 2.3rem;
+  color:var(--font-1);
+}
+.titulo span {
+  color:var(--cor-primaria);
+}
+
 /* Header */
 .logo {
   stroke-width: 1px;
@@ -42,6 +51,7 @@ body {
   align-items: center;
   justify-content: space-around;
   padding:10px 0 0 0;
+  flex-wrap: wrap;
 }
 .navegacao ul li a.active {
   color:var(--bg);
@@ -99,28 +109,33 @@ body {
   display: none;
 }
 .container section {
-  display: flex;
   flex: none;
-  align-items: center;
-  justify-content: center;
   width:100vw;
   height:calc(100vh - 145px);
   scroll-snap-align: start;
 }
+.containerPage {
+  display: flex;
+  max-width: 1000px;
+  margin:0 auto;
+}
 
 /* Home */
+.homePage {
+  display: flex;
+  justify-content: center;
+}
 .homePage div {
-  margin-top:100px;
-  color:var(--font-1);
-  align-self: flex-start;
+  margin-bottom:40px;
+  align-items: center;
+}
+.homePage img {
+  width:450px;
+  overflow: hidden;
 }
 .homePage div h1 {
   max-width:550px;
   margin-bottom:15px;
-  font-size: 2.3rem;
-}
-.homePage div h1 span{
-  color:var(--cor-primaria);
 }
 .homePage div p {
   max-width: 470px;
@@ -137,9 +152,6 @@ body {
 }
 .homePage div a:hover {
   box-shadow: 0 0 15px var(--cor-sombra);
-}
-.homePage img{
-  width:450px;
 }
 
 /* Footer */
