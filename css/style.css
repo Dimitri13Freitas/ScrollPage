@@ -13,7 +13,7 @@
   --font-2:#B2B2B2;
   --cor-primaria:#BDFF02;
   --cor-sombra:#90b822;
-  --hoverNav:#2d3341;
+  --hoverPacotes:#1c212c;
 }
 
 /* Geral */
@@ -33,6 +33,17 @@ body {
 .titulo span {
   color:var(--cor-primaria);
 }
+.btn {
+  color:var(--bg);
+  display: inline-block;
+  padding:10px 25px;
+  background-color: var(--cor-primaria);
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.btn:hover {
+  box-shadow: 0 0 15px var(--cor-sombra);
+} 
 
 /* Header */
 .logo {
@@ -142,17 +153,6 @@ body {
   color:var(--font-2);
   margin-bottom:25px;
 }
-.homeContent div a {
-  color:var(--bg);
-  display: inline-block;
-  padding:10px 25px;
-  background-color: var(--cor-primaria);
-  border-radius: 5px;
-  transition: 0.3s;
-}
-.homeContent div a:hover {
-  box-shadow: 0 0 15px var(--cor-sombra);
-}
 
 /* Serviços */
 .servicosContent div{
@@ -161,6 +161,59 @@ body {
   align-items: center;
   margin-top:25px;
 }
+.planos {
+  margin-top:30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:30px;
+}
+.planos ul {
+  padding:20px 30px;
+  border:var(--cor-primaria) solid 2px;
+  border-radius:5px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition:0.2s;
+}
+.planos ul:hover {
+  transform: scale(1.01);
+  background-color: var(--hoverPacotes);
+}
+.planos ul li {
+  color:var(--font-1);
+  font-size: 0.90rem;
+}
+.planos ul li::before {
+  content:'✔';
+  color:var(--cor-primaria);
+  margin-right: 5px;
+}
+.planos ul h2 {
+  color:#a2ad08;
+}
+.planos ul h1 {
+  color:var(--font-1);
+  font-size: 1.5rem;
+}
+.planos ul span {
+  color:var(--font-2);
+  font-size: 0.80rem;
+}
+.planos ul div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin:0 0 10px 0;
+}
+.planos ul:nth-child(2) div h2 {
+  color:#787973;
+}
+.planos ul:nth-child(3) div h2 {
+  color:#755d0c;
+}
+
 /* Footer */
 .footer {
   text-align: center;
