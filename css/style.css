@@ -1,6 +1,6 @@
 /* Reset */
 * {
-  margin:0;
+  margin:0px;
   padding:0;
   list-style: none;
   text-decoration: none;
@@ -155,8 +155,9 @@ body {
 }
 
 /* Serviços */
-.servicosContent div{
+.introducaoPage {
   display: flex;
+  flex-wrap:wrap;
   justify-content: space-between;
   align-items: center;
   margin-top:25px;
@@ -167,6 +168,7 @@ body {
   justify-content: center;
   align-items: center;
   gap:30px;
+  flex-wrap: wrap;
 }
 .planos ul {
   padding:20px 30px;
@@ -176,6 +178,17 @@ body {
   flex-direction: column;
   gap: 15px;
   transition:0.2s;
+  position: relative;
+}
+.planos ul:after {
+  content: '';
+  background-image: url("../img/asset2.svg");
+  width:179px;
+  height: 257px;
+  position:absolute;
+  right:0;
+  bottom:0;
+  z-index:-1;
 }
 .planos ul:hover {
   transform: scale(1.01);
@@ -191,7 +204,7 @@ body {
   margin-right: 5px;
 }
 .planos ul h2 {
-  color:#a2ad08;
+  color:#afbb07;
 }
 .planos ul h1 {
   color:var(--font-1);
@@ -203,6 +216,7 @@ body {
 }
 .planos ul div {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   margin:0 0 10px 0;
@@ -214,11 +228,63 @@ body {
   color:#755d0c;
 }
 
+/* Comunidade */
+.feedContainer {
+  margin-top:25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap:20px;
+}
+.feed {
+  border:var(--cor-primaria) solid 2px;
+  border-radius:5px;
+  max-width: 446px;
+  padding:20px;
+  margin:0 auto;
+  position:relative;
+}
+.feed::after {
+  content:'';
+  background-image: url("../img/asset3.svg");
+  width:242px;
+  height:74px;
+  position:absolute;
+  right: 0;
+  bottom:0;
+  z-index: -1;
+}
+.feed div {
+  display:flex;
+  align-items: center;
+  gap:10px;
+}
+.feed div span {
+  color: yellow;
+  font-size: 1.09rem;
+}
+.feed div h2 {
+  color: var(--font-1);
+}
+.feed p {
+  color:var(--font-2);
+  font-size: 0.9rem;
+}
+
 /* Footer */
 .footer {
   text-align: center;
   padding-bottom:10px;
   color:var(--font-2);
+}
+
+/* Reponsivo */
+@media (max-width:560px) {
+  .containerPage {
+    max-width: 400px;
+  }
+  .homeContent img {
+    display: none;
+  }
 }
 
 /* Animações */
