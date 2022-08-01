@@ -270,6 +270,20 @@ body {
   font-size: 0.9rem;
 }
 
+/* Dev */
+.devPortfolio {
+  display:flex;
+  justify-content: center;
+  margin-top:100px;
+}
+.devPortfolio a img{
+  width:90px;
+  transition:0.3s;
+}
+.devPortfolio a img:hover {
+  filter: drop-shadow(0 0 50px var(--cor-sombra));
+}
+
 /* Footer */
 .footer {
   text-align: center;
