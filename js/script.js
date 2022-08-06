@@ -33,3 +33,18 @@ function navSlide() {
   });
 };
 navSlide();
+
+function windowMove() {
+  const dev = document.querySelector('.devPortfolio');
+  const devMessage = document.querySelector('.devWindowMove');
+
+  dev.addEventListener('mousemove', (e) => {
+    let x = e.clientX + 25;
+    let y = e.clientY;
+  
+    devMessage.style.left = x + 'px'
+    devMessage.style.top = y + 'px'
+  });
+
+};
+windowMove();
