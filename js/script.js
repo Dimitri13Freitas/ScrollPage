@@ -14,26 +14,35 @@ function logoAdd() {
 };
 logoAdd();
 
-// Active
-function navSlide() {
-  const nav = document.querySelectorAll('#nav li a');
-  const tabSlide = document.querySelector('.tabSlide');
+// animação na navegação
+function navAnime() {
+const li = document.querySelectorAll('#nav ul li');
+const slider = document.querySelector('.tabSlide');
 
-  let navTeste = ['home', 'servicos', 'comunidade', 'dev'];
+slider.style.width = li[0].clientWidth + 'px';
+slider.style.height = li[0].clientHeight + 'px';
 
-  nav.forEach((e, index) => {
-    e.addEventListener('click', () => {
-      tabSlide.classList.remove('home', 'servicos', 'comunidade', 'dev');
-      tabSlide.classList.add(navTeste[index]);
-      nav.forEach((event) => {
-        event.classList.remove('active');
-      });
-      e.classList.add('active');
+slider.style.left = li[0].getBoundingClientRect().x + 'px';
+
+li.forEach((linkPage) => {
+
+  linkPage.addEventListener('click', () => {
+    
+    slider.style.width = linkPage.clientWidth + 'px';
+    slider.style.height = linkPage.clientHeight + 'px';
+    
+    slider.style.left = linkPage.getBoundingClientRect().x + 'px';
+
+    li.forEach((e) => {
+      e.firstElementChild.classList.remove('active');
     });
+    linkPage.firstElementChild.classList.add('active');
   });
+});
 };
-navSlide();
+navAnime();
 
+// Mensagem que segue o cursor na página de dev
 function windowMove() {
   const dev = document.querySelector('.devPortfolio');
   const devMessage = document.querySelector('.devWindowMove');
