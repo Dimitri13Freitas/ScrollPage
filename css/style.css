@@ -252,7 +252,7 @@ body {
   display: flex;
   margin:100px auto 0;
   width:90px;
-  padding:20px;
+  padding:40px;
   position:relative;
   transition:0.3s;
 }
@@ -262,13 +262,12 @@ body {
 .devPortfolio a img{
   width:100px;
 }
-.devPortfolio:hover ~ .devWindowMove {
+.devPortfolio:hover ~ .devWindowMoveContainer {
   display:block;
   opacity:1;
 }
-.devWindowMove {
-  color: var(--font-2);
-  padding:8px 20px;
+.devWindowMoveContainer {
+  padding:5px;
   display: none;
   position:absolute;
   /* Glassmorphism */
@@ -276,8 +275,17 @@ body {
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur( 3px );
   -webkit-backdrop-filter: blur( 3px );
-  border-radius: 10px;
+  border-radius: 5px;
   border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.devWindowMoveContainer div{
+  background-color: var(--font-1);
+  border-radius: 5px;
+  padding:10px 20px;
+}
+.devWindowMoveContainer div p {
+  color:var(--hoverPacotes);
+  font-weight: bold;
 }
 
 /* Footer */

@@ -45,7 +45,7 @@ navAnime();
 // Mensagem que segue o cursor na página de dev
 function windowMove() {
   const dev = document.querySelector('.devPortfolio');
-  const devMessage = document.querySelector('.devWindowMove');
+  const devMessage = document.querySelector('.devWindowMoveContainer');
 
   dev.addEventListener('mousemove', (e) => {
     let x = e.clientX + 25;
